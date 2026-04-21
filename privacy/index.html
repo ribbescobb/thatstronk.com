@@ -47,26 +47,29 @@
             border-bottom: 1px solid rgba(255,255,255,0.04);
         }
 
-        .nav-home {
+        .nav-brand {
             font-family: 'Space Grotesk', sans-serif;
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--text);
+            text-decoration: none;
+            letter-spacing: 0.02em;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+        }
+        .nav-links a {
             font-size: 14px;
             font-weight: 500;
             color: var(--muted);
             text-decoration: none;
-            letter-spacing: 0.04em;
+            letter-spacing: 0.02em;
             transition: color 0.2s;
         }
-        .nav-home:hover { color: var(--text); }
-
-        .nav-stronk {
-            font-family: 'Archivo Black', sans-serif;
-            font-size: 16px;
-            color: var(--orange);
-            text-decoration: none;
-            letter-spacing: -0.5px;
-            transition: opacity 0.2s;
-        }
-        .nav-stronk:hover { opacity: 0.8; }
+        .nav-links a:hover { color: var(--text); }
+        .nav-links a.active { color: var(--orange); }
 
         /* ── Content ── */
         .content {
@@ -164,6 +167,7 @@
 
         @media (max-width: 600px) {
             .content { padding: 100px 24px 80px; }
+            .nav-links { gap: 20px; }
         }
     </style>
 </head>
@@ -171,8 +175,13 @@
 
     <!-- NAV -->
     <nav class="nav">
-        <a href="https://ribbescobb.com" class="nav-home">Ribbescobb Labs</a>
-        <a href="/" class="nav-stronk">STRONK</a>
+        <a href="https://ribbescobb.com" class="nav-brand">Ribbescobb Labs</a>
+        <div class="nav-links">
+            <a href="/" class="active">STRONK</a>
+            <a href="https://ribbescobb.com/kept">Kept</a>
+            <a href="https://ribbescobb.com/etymology">The Word</a>
+            <a href="https://ribbescobb.com/contact">Contact</a>
+        </div>
     </nav>
 
     <!-- CONTENT -->
