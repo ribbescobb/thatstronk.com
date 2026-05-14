@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>That's Stronk — Lift Log</title>
+    <meta name="description" content="The simplest way to log your lifts.">
+
+    <!-- Open Graph meta tags — drives the link preview card in iMessage,
+         WhatsApp, Slack, etc. when users share a STRONK Moment. Compact
+         and on-brand, vs. Apple's giant full-app-listing preview that
+         apps.apple.com/... links produce by default. -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="That's Stronk: Lift Log">
+    <meta property="og:description" content="The simplest way to log your lifts.">
+    <meta property="og:url" content="https://thatstronk.com/get">
+    <meta property="og:image" content="https://thatstronk.com/icon.png">
+    <meta property="og:image:width" content="512">
+    <meta property="og:image:height" content="512">
+    <meta property="og:site_name" content="That's Stronk">
+
+    <!-- Twitter card — same idea for X/Twitter unfurls. -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="That's Stronk: Lift Log">
+    <meta name="twitter:description" content="The simplest way to log your lifts.">
+    <meta name="twitter:image" content="https://thatstronk.com/icon.png">
+
+    <!-- Redirect strategy:
+         1. Meta refresh: triggers on regular browser load. Most reliable
+            cross-platform. Crawlers (Facebook/iMessage/Slack) ignore it.
+         2. JS redirect: faster than meta-refresh for users with JS on.
+         3. Visible fallback link below for the rare case where neither
+            redirect fires (JS off + meta-refresh blocked).
+         Link-preview crawlers read OG tags from this page WITHOUT
+         following the redirect, so the preview card stays branded as
+         STRONK rather than the App Store. -->
+    <meta http-equiv="refresh" content="0;url=https://apps.apple.com/app/id6761347462">
+    <script>
+        window.location.replace("https://apps.apple.com/app/id6761347462");
+    </script>
+
+    <style>
+        body {
+            background: #0D0D0D;
+            color: #E8E8E8;
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            text-align: center;
+            padding: 80px 20px;
+        }
+        a {
+            color: #E8622A;
+            text-decoration: none;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <p>Heading to the App Store…</p>
+    <p><a href="https://apps.apple.com/app/id6761347462">Tap here if you're not redirected automatically.</a></p>
+</body>
+</html>
